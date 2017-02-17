@@ -1,0 +1,336 @@
+<mvc:View controllerName="wb.cosmos.dealapp.controller.SearchDeal" height="100%" width="100%" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<!--<Page title="{i18n>searchDealTitle}" class="sapUiResponsiveContentPadding">-->
+	<Page class="sapUiResponsiveContentPadding">
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Image id="wbLogo" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Warner_Bros_logo.svg" width="30px" height="30px"/>
+				</contentLeft>
+				<contentMiddle>
+					<!--<Text id="titleMain" text="{i18n>searchDealTitle}"/>-->
+					<FormattedText htmlText="&lt;strong&gt;{i18n>searchDealTitle}&lt;/strong&gt;&lt;b&gt;"/>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<Panel>
+			<headerToolbar>
+				<Toolbar height="2rem">
+					<Title text="General Selection"/>
+				</Toolbar>
+			</headerToolbar>
+			<content>
+				<f:Form id="FormChange354" editable="true" width="100%">
+					<f:layout>
+<!--						<f:ResponsiveGridLayout labelSpanL="3" labelSpanM="3" emptySpanL="1" emptySpanM="1" columnsL="2" columnsM="1"/> -->
+						<f:ResponsiveGridLayout labelSpanL="4" labelSpanM="3" labelSpanS="2" emptySpanM="1" emptySpanS="1" columnsL="2" columnsM="2" breakpointL="800" breakpointM="400"/>
+					</f:layout>
+					<f:formContainers>
+						<f:FormContainer expanded="true" expandable="true">
+							<f:formElements>
+								<f:FormElement label="{i18n>salesOffice}">
+									<f:fields>
+										<MultiComboBox id="comboSalesOff" selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="500px"
+											items="{ path: 'salesOffice>/DATA', sorter: { path: 'salesOffice>FIELD1' } }">
+											<core:Item key="{salesOffice>FIELD1}" text="{salesOffice>FIELD2} | {salesOffice>FIELD1}"/>
+										</MultiComboBox>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>ip}">
+									<f:fields>
+										<MultiInput
+											id="multiIP"
+											showValueHelp="false"
+											showSuggestion="true"
+											suggest="loadIP">
+										</MultiInput>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>reportingMedia}">
+									<f:fields>
+										<MultiComboBox id="comboRepMedia" width="500px" 
+											items="{ path: 'RepMedSearchHelp>/DATA', sorter: { path: 'RepMedSearchHelp>KEY_FIELD' } }">
+											<core:Item key="{RepMedSearchHelp>KEY_FIELD}" text="{RepMedSearchHelp>VAL_FIELD} | {RepMedSearchHelp>KEY_FIELD}"/>
+										</MultiComboBox>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>reportingTerr}">
+									<f:fields>
+										<MultiComboBox id="comboRepTerri" width="500px" 
+											items="{ path: 'RepTerSearchHelp>/DATA', sorter: { path: 'RepTerSearchHelp>KEY_FIELD' } }">
+											<core:Item key="{RepTerSearchHelp>KEY_FIELD}" text="{RepTerSearchHelp>VAL_FIELD} | {RepTerSearchHelp>KEY_FIELD}"/>
+										</MultiComboBox>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>dealID}">
+									<f:fields>
+										<MultiInput
+											id="multiDealID"
+											showValueHelp="true"
+											showSuggestion="true"
+											enableMultiLineMode="true"
+											suggest="loadDealID">
+										</MultiInput>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>dealStatus}">
+									<f:fields>
+										<MultiComboBox id="comboDealStatus" width="500px" 
+											items="{ path: 'DealStatSearchHelp>/DATA', sorter: { path: 'DealStatSearchHelp>KEY_FIELD' } }">
+											<core:Item key="{DealStatSearchHelp>KEY_FIELD}" text="{DealStatSearchHelp>VAL_FIELD} | {DealStatSearchHelp>KEY_FIELD}"/>
+										</MultiComboBox>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>changeOrderID}">
+									<f:fields>
+										<MultiInput
+											id="multiChangeOrderID"
+											showValueHelp="true"
+											showSuggestion="true"
+											enableMultiLineMode="true"
+											suggest="loadChangeOrderID">
+										</MultiInput>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>changeOrderStatus}">
+									<f:fields>
+										<MultiComboBox id="comboCOStatus" width="500px" 
+											items="{ path: 'COStatSearchHelp>/DATA', sorter: { path: 'COStatSearchHelp>KEY_FIELD' } }">
+											<core:Item key="{COStatSearchHelp>KEY_FIELD}" text="{COStatSearchHelp>VAL_FIELD} | {COStatSearchHelp>KEY_FIELD}"/>
+										</MultiComboBox>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>licensee}">
+									<f:fields>
+										<MultiInput
+											id="multiLicensee"
+											showValueHelp="false"
+											showSuggestion="true"
+											suggest="loadLicensee">
+										</MultiInput>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>royaltiesScopeStatus}">
+									<f:fields>
+										<MultiComboBox id="comboRoyScopeStatus" width="500px" 
+											items="{ path: 'RoyStatSearchHelp>/DATA', sorter: { path: 'RoyStatSearchHelp>KEY_FIELD' } }">
+											<core:Item key="{RoyStatSearchHelp>KEY_FIELD}" text="{RoyStatSearchHelp>VAL_FIELD} | {RoyStatSearchHelp>KEY_FIELD}"/>
+										</MultiComboBox>
+									</f:fields>
+								</f:FormElement>
+								<!--<f:FormElement label="{i18n>employeeResponsible}">-->
+								<!--	<f:fields>-->
+								<!--		<MultiInput-->
+								<!--			id="multiEmpResp"-->
+								<!--			showValueHelp="false"-->
+								<!--			showSuggestion="true"-->
+								<!--			suggest="loadEmpResp">-->
+								<!--		</MultiInput>-->
+								<!--	</f:fields>-->
+								<!--</f:FormElement>-->
+							</f:formElements>
+						</f:FormContainer>
+						<f:FormContainer  expanded="true" expandable="true">
+							<f:formElements>
+								<f:FormElement label="{i18n>employeeResponsible}">
+									<f:fields>
+										<MultiInput
+											id="multiEmpResp"
+											showValueHelp="false"
+											showSuggestion="true"
+											suggest="loadEmpResp">
+										</MultiInput>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>salesExecutive}">
+									<f:fields>
+										<MultiInput
+											id="multiSalesExec"
+											showValueHelp="false"
+											showSuggestion="true"
+											suggest="loadSalesExec">
+										</MultiInput>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>contactAdminAssigned}">
+									<f:fields>
+										<MultiInput
+											id="multiContAdmin"
+											showValueHelp="false"
+											showSuggestion="true"
+											suggest="loadContAdmin">
+										</MultiInput>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>contractManagerAssigned}">
+									<f:fields>
+										<MultiInput
+											id="multiContManag"
+											showValueHelp="false"
+											showSuggestion="true"
+											suggest="loadContManag">
+										</MultiInput>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>companyCode}">
+									<f:fields>
+										<MultiComboBox id="comboCompCode" width="500px" 
+											items="{ path: 'compCode>/DATA', sorter: { path: 'compCode>FIELD3' } }">
+											<core:Item key="{compCode>FIELD3}" text="{compCode>FIELD4} | {compCode>FIELD3}"/>
+										</MultiComboBox> 
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>distributionChannel}">
+									<f:fields>
+										<MultiComboBox id="comboDistChannel" width="500px" 
+											items="{ path: 'distChannel>/DATA', sorter: { path: 'distChannel>FIELD5' } }">
+											<core:Item key="{distChannel>FIELD5}" text="{distChannel>FIELD6} | {distChannel>FIELD5}"/>
+										</MultiComboBox>
+										<!--<Input value=""/>-->
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>division}">
+									<f:fields>
+										<MultiComboBox id="comboDivision" width="500px" 
+											items="{ path: 'division>/DATA', sorter: { path: 'division>FIELD7' } }">
+											<core:Item key="{division>FIELD7}" text="{division>FIELD8} | {division>FIELD7}"/>
+										</MultiComboBox>
+										<!--<Input value=""/>-->
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>targetCurrency}">
+									<f:fields>
+										<MultiComboBox id="comboTarCurr" width="500px" 
+											items="{ path: 'TarCurrSearchHelp>/DATA', sorter: { path: 'TarCurrSearchHelp>KEY_FIELD' } }">
+											<core:Item key="{TarCurrSearchHelp>KEY_FIELD}" text="{TarCurrSearchHelp>VAL_FIELD} | {TarCurrSearchHelp>KEY_FIELD}"/>
+										</MultiComboBox>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="{i18n>transactionTyp}">
+									<f:fields>
+										<MultiComboBox id="comboTranType" width="500px" 
+											items="{ path: 'TranTypeSearchHelp>/TransactionTypes', sorter: { path: 'TranTypeSearchHelp>TType_Code' } }">
+											<core:Item key="{TranTypeSearchHelp>TType_Code}" text="{TranTypeSearchHelp>TType_Desc} | {TranTypeSearchHelp>TType_Code}"/>
+										</MultiComboBox>
+									</f:fields>
+								</f:FormElement>
+								<!--<f:FormElement label="{i18n>billingReview}">-->
+								<!--	<f:fields>-->
+								<!--		<ComboBox id="comboBillingReview" selectedKey="NA">-->
+								<!--			<core:Item key="NA" text="N/A"/>-->
+								<!--			<core:Item key="Yes" text="Checked"/>-->
+								<!--			<core:Item key="No" text="Unchecked"/>-->
+								<!--		</ComboBox>-->
+								<!--	</f:fields>-->
+								<!--</f:FormElement>-->
+								<!--<f:FormElement label="{i18n>revenueReview}">-->
+								<!--	<f:fields>-->
+								<!--		<ComboBox id="comboRevenueReview" selectedKey="NA">-->
+								<!--			<core:Item key="NA" text="N/A"/>-->
+								<!--			<core:Item key="Yes" text="Checked"/>-->
+								<!--			<core:Item key="No" text="Unchecked"/>-->
+								<!--		</ComboBox>-->
+								<!--	</f:fields>-->
+								<!--</f:FormElement>-->
+							</f:formElements>
+						</f:FormContainer>
+					</f:formContainers>
+				</f:Form>
+			</content>
+		</Panel>
+		
+		<Panel>
+			<headerToolbar>
+				<Toolbar height="2rem">
+					<Title text="Date Selection"/>
+				</Toolbar>
+			</headerToolbar>
+			<content>
+				<l:Grid>
+					<l:content>
+						<CheckBox id="checkDealWhereEnd" text="{i18n>dealWhereDealEndDate}" select="onDealSelection"/>
+						<DatePicker id="dateDealWhereEnd"/>
+						<CheckBox id="checkLicenseActiveQuarter" text="{i18n>licenseActiveinQuarter}" select="onDealSelection"/>
+						<HBox>
+<!--							<ComboBox items="{ path: '/ProductCollection', sorter: { path: 'Name' } }"> -->
+							<ComboBox id="comboQuarter">
+								<core:Item id="Q1" key="Q1" text="Q1"/>
+								<core:Item id="Q2" key="Q2" text="Q2"/>
+								<core:Item id="Q3" key="Q3" text="Q3"/>
+								<core:Item id="Q4" key="Q4" text="Q4"/>
+							</ComboBox>
+							<Label width="10px"/>
+<!--							<ComboBox items="{ path: '/ProductCollection', sorter: { path: 'Name' } }"> -->
+							<ComboBox id="comboYears"/>
+						</HBox>
+						<CheckBox id="checkDealLastChanged" text="{i18n>dealLastChanged}" select="onDealSelection">
+							<layoutData>
+								<l:GridData linebreakL="true" linebreakM="true" linebreakS="true"/>
+							</layoutData>
+						</CheckBox>
+						<DatePicker id="dateDealLastChanged"/>
+						<CheckBox id="checkDealCreatedOn" text="{i18n>dealCreatedOn}" select="onDealSelection"/>
+						<DatePicker id="dateDealCreatedOn"/>
+						<!--<CheckBox id="checkRevRecDate" text="{i18n>revRegDate}" select="onDealSelection">-->
+						<!--	<layoutData>-->
+						<!--		<l:GridData linebreakL="true" linebreakM="true" linebreakS="true"/>-->
+						<!--	</layoutData>-->
+						<!--</CheckBox>-->
+						<!--<DateRangeSelection id="dateRevenueRecog" displayFormat="dd-MMM-yyyy"-->
+						<!--	dateValue="{path:'/dateValueDRS2'}" secondDateValue="{path:'/secondDateValueDRS2'}"-->
+						<!--	minDate="{path:'/dateMinDRS2'}" maxDate="{path:'/dateMaxDRS2'}" change="handleDateChange"/>-->
+						<!--<CheckBox id="checkStatusTBA" text="{i18n>tbaStatus}" select="onDealSelection"/>-->
+						
+<!--						<CheckBox text="{i18n>dealWhereDealEndDate}"/>
+						<DatePicker dateValue=""/>
+						<CheckBox text="{i18n>licenseActiveinQuarter}">
+							<layoutData>
+								<l:GridData linebreakL="true" linebreakM="true" linebreakS="true"/>
+							</layoutData>
+						</CheckBox>
+						<HBox>
+							<ComboBox items="{ path: '/ProductCollection', sorter: { path: 'Name' } }">
+								<core:Item key="{ProductId}" text="{Name}"/>
+							</ComboBox>
+							<Label width="10px"/>
+							<ComboBox items="{ path: '/ProductCollection', sorter: { path: 'Name' } }">
+								<core:Item key="{ProductId}" text="{Name}"/>
+							</ComboBox>
+						</HBox>
+						<CheckBox text="{i18n>dealLastChanged}">
+							<layoutData>
+								<l:GridData linebreakL="true" linebreakM="true" linebreakS="true"/>
+							</layoutData>
+						</CheckBox>
+						<DatePicker dateValue=""/>
+						<CheckBox text="{i18n>dealCreatedOn}">
+							<layoutData>
+								<l:GridData linebreakL="true" linebreakM="true" linebreakS="true"/>
+							</layoutData>
+						</CheckBox>
+						<DatePicker dateValue=""/>
+						<CheckBox text="{i18n>revRegDate}">
+							<layoutData>
+								<l:GridData linebreakL="true" linebreakM="true" linebreakS="true"/>
+							</layoutData>
+						</CheckBox>
+						<DateRangeSelection id="DRS2" dateValue="{path:'/dateValueDRS2'}" secondDateValue="{path:'/secondDateValueDRS2'}"
+							minDate="{path:'/dateMinDRS2'}" maxDate="{path:'/dateMaxDRS2'}" change="handleChange"/>
+						<CheckBox text="{i18n>tbaStatus}"/> -->
+						
+					</l:content>
+				</l:Grid>
+			</content>
+		</Panel>
+		
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button id="Execute" type="Accept" text="Execute" press="onExecute"/>
+					<!--<Button id="Execute1" type="Accept" text="Chun Wei TEst" press="onExecute1"/>-->
+					<Button id="Reset" text="Reset" type="Reject" press="handleSavePress"/>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

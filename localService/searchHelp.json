@@ -1,0 +1,543 @@
+{
+	"DATA": [{
+		"FIELD1": "50002026",
+		"FIELD2": "Shed",
+		"FIELD3": "6620",
+		"FIELD4": "null",
+		"FIELD5": "62",
+		"FIELD6": "Non-WB Hist. Sales",
+		"FIELD7": "6P",
+		"FIELD8": "Shed"
+	}, {
+		"FIELD1": "50002026",
+		"FIELD2": "Shed",
+		"FIELD3": "6620",
+		"FIELD4": "null",
+		"FIELD5": "63",
+		"FIELD6": "Format",
+		"FIELD7": "6P",
+		"FIELD8": "Shed"
+	}, {
+		"FIELD1": "50002950",
+		"FIELD2": "BlazzHoffski",
+		"FIELD3": "6690",
+		"FIELD4": "null",
+		"FIELD5": "63",
+		"FIELD6": "Format",
+		"FIELD7": "6Q",
+		"FIELD8": "BlazzHoffski"
+	}, {
+		"FIELD1": "50002950",
+		"FIELD2": "BlazzHoffski",
+		"FIELD3": "6690",
+		"FIELD4": "null",
+		"FIELD5": "62",
+		"FIELD6": "Non-WB Hist. Sales",
+		"FIELD7": "6Q",
+		"FIELD8": "BlazzHoffski"
+	}, {
+		"FIELD1": "50005954",
+		"FIELD2": "WBITDI Euro Regional Format Sales",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "63",
+		"FIELD6": "Format",
+		"FIELD7": "6B",
+		"FIELD8": "Euro Regional"
+	}, {
+		"FIELD1": "50001628",
+		"FIELD2": "Burbank",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6A",
+		"FIELD8": "Burbank"
+	}, {
+		"FIELD1": "50001653",
+		"FIELD2": "Euro Regional",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6B",
+		"FIELD8": "Euro Regional"
+	}, {
+		"FIELD1": "50001654",
+		"FIELD2": "London",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6C",
+		"FIELD8": "London"
+	}, {
+		"FIELD1": "50001940",
+		"FIELD2": "Moscow",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6N",
+		"FIELD8": "Moscow"
+	}, {
+		"FIELD1": "50001655",
+		"FIELD2": "Miami",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6E",
+		"FIELD8": "Miami"
+	}, {
+		"FIELD1": "50001712",
+		"FIELD2": "Madrid",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6D",
+		"FIELD8": "Madrid"
+	}, {
+		"FIELD1": "50001656",
+		"FIELD2": "Munich",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6F",
+		"FIELD8": "Munich"
+	}, {
+		"FIELD1": "50001657",
+		"FIELD2": "Paris",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6G",
+		"FIELD8": "Paris"
+	}, {
+		"FIELD1": "50001658",
+		"FIELD2": "Rome",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6H",
+		"FIELD8": "Rome"
+	}, {
+		"FIELD1": "50001659",
+		"FIELD2": "Seoul",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6I",
+		"FIELD8": "Seoul"
+	}, {
+		"FIELD1": "50001660",
+		"FIELD2": "Beijing",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6J",
+		"FIELD8": "Beijing"
+	}, {
+		"FIELD1": "50001661",
+		"FIELD2": "Sydney",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6K",
+		"FIELD8": "Sydney"
+	}, {
+		"FIELD1": "50001662",
+		"FIELD2": "Tokyo",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6L",
+		"FIELD8": "Tokyo"
+	}, {
+		"FIELD1": "50001663",
+		"FIELD2": "Toronto",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6M",
+		"FIELD8": "Toronto"
+	}, {
+		"FIELD1": "50001674",
+		"FIELD2": "Tokyo Franchise",
+		"FIELD3": "8003",
+		"FIELD4": "Warner Ent Japan Inc",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6L",
+		"FIELD8": "Tokyo"
+	}, {
+		"FIELD1": "50001676",
+		"FIELD2": "Sydney Franchise",
+		"FIELD3": "8000",
+		"FIELD4": "Warner Bros. Ent. Austral",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6K",
+		"FIELD8": "Sydney"
+	}, {
+		"FIELD1": "50001678",
+		"FIELD2": "Paris Franchise",
+		"FIELD3": "6007",
+		"FIELD4": "Warner Bros. France S.A.",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6G",
+		"FIELD8": "Paris"
+	}, {
+		"FIELD1": "50001689",
+		"FIELD2": "Burbank Branded",
+		"FIELD3": "2608",
+		"FIELD4": "WBTV Distribution Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6A",
+		"FIELD8": "Burbank"
+	}, {
+		"FIELD1": "50001695",
+		"FIELD2": "Euro Regional Branded",
+		"FIELD3": "2608",
+		"FIELD4": "WBTV Distribution Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6B",
+		"FIELD8": "Euro Regional"
+	}, {
+		"FIELD1": "50001698",
+		"FIELD2": "Rome Local Prod-Dist.",
+		"FIELD3": "6008",
+		"FIELD4": "Warner Ent. Italia SpA",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6H",
+		"FIELD8": "Rome"
+	}, {
+		"FIELD1": "50001699",
+		"FIELD2": "London Branded",
+		"FIELD3": "2608",
+		"FIELD4": "WBTV Distribution Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6C",
+		"FIELD8": "London"
+	}, {
+		"FIELD1": "50001700",
+		"FIELD2": "Madrid Branded",
+		"FIELD3": "2608",
+		"FIELD4": "WBTV Distribution Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6D",
+		"FIELD8": "Madrid"
+	}, {
+		"FIELD1": "50001740",
+		"FIELD2": "Miami Branded",
+		"FIELD3": "2608",
+		"FIELD4": "WBTV Distribution Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6E",
+		"FIELD8": "Miami"
+	}, {
+		"FIELD1": "50005825",
+		"FIELD2": "WBITVP Finished Sales",
+		"FIELD3": "null",
+		"FIELD4": "null",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6O",
+		"FIELD8": "WBITVP"
+	}, {
+		"FIELD1": "50001927",
+		"FIELD2": "Munich Branded",
+		"FIELD3": "2608",
+		"FIELD4": "WBTV Distribution Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6F",
+		"FIELD8": "Munich"
+	}, {
+		"FIELD1": "50001928",
+		"FIELD2": "Rome Branded",
+		"FIELD3": "2608",
+		"FIELD4": "WBTV Distribution Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6H",
+		"FIELD8": "Rome"
+	}, {
+		"FIELD1": "50001929",
+		"FIELD2": "Beijing Branded",
+		"FIELD3": "2608",
+		"FIELD4": "WBTV Distribution Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6J",
+		"FIELD8": "Beijing"
+	}, {
+		"FIELD1": "50001931",
+		"FIELD2": "Toronto Branded",
+		"FIELD3": "2608",
+		"FIELD4": "WBTV Distribution Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6M",
+		"FIELD8": "Toronto"
+	}, {
+		"FIELD1": "50001679",
+		"FIELD2": "Paris Franchise Branded",
+		"FIELD3": "6007",
+		"FIELD4": "Warner Bros. France S.A.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6G",
+		"FIELD8": "Paris"
+	}, {
+		"FIELD1": "50001677",
+		"FIELD2": "Sydney Franchise Branded",
+		"FIELD3": "8000",
+		"FIELD4": "Warner Bros. Ent. Austral",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6K",
+		"FIELD8": "Sydney"
+	}, {
+		"FIELD1": "50002106",
+		"FIELD2": "Paris Branded",
+		"FIELD3": "2608",
+		"FIELD4": "WBTV Distribution Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6G",
+		"FIELD8": "Paris"
+	}, {
+		"FIELD1": "50002107",
+		"FIELD2": "Sydney Branded",
+		"FIELD3": "2608",
+		"FIELD4": "WBTV Distribution Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6K",
+		"FIELD8": "Sydney"
+	}, {
+		"FIELD1": "50002949",
+		"FIELD2": "Seoul Branded",
+		"FIELD3": "2608",
+		"FIELD4": "WBTV Distribution Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6I",
+		"FIELD8": "Seoul"
+	}, {
+		"FIELD1": "50001675",
+		"FIELD2": "Tokyo Franchise Branded",
+		"FIELD3": "8003",
+		"FIELD4": "Warner Ent Japan Inc",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6L",
+		"FIELD8": "Tokyo"
+	}, {
+		"FIELD1": "50003091",
+		"FIELD2": "WBITDI London Format Sales",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "63",
+		"FIELD6": "Format",
+		"FIELD7": "6C",
+		"FIELD8": "London"
+	}, {
+		"FIELD1": "50003092",
+		"FIELD2": "WBITDI Beijing Format Sales",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "63",
+		"FIELD6": "Format",
+		"FIELD7": "6J",
+		"FIELD8": "Beijing"
+	}, {
+		"FIELD1": "50003093",
+		"FIELD2": "WBITDI Madrid Format Sales",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "63",
+		"FIELD6": "Format",
+		"FIELD7": "6D",
+		"FIELD8": "Madrid"
+	}, {
+		"FIELD1": "50003094",
+		"FIELD2": "France Franchise Format Sales",
+		"FIELD3": "6007",
+		"FIELD4": "Warner Bros. France S.A.",
+		"FIELD5": "63",
+		"FIELD6": "Format",
+		"FIELD7": "6G",
+		"FIELD8": "Paris"
+	}, {
+		"FIELD1": "50004777",
+		"FIELD2": "WBITDI Rome Format Sales",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "63",
+		"FIELD6": "Format",
+		"FIELD7": "6H",
+		"FIELD8": "Rome"
+	}, {
+		"FIELD1": "50004778",
+		"FIELD2": "WBITDI Sydney Format Sales",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "63",
+		"FIELD6": "Format",
+		"FIELD7": "6K",
+		"FIELD8": "Sydney"
+	}, {
+		"FIELD1": "50001680",
+		"FIELD2": "Seoul Franchise",
+		"FIELD3": "8002",
+		"FIELD4": "Warner Bros. (Korea) Inc.",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6I",
+		"FIELD8": "Seoul"
+	}, {
+		"FIELD1": "50004901",
+		"FIELD2": "WBITDI Toronto Format Sales",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "63",
+		"FIELD6": "Format",
+		"FIELD7": "6M",
+		"FIELD8": "Toronto"
+	}, {
+		"FIELD1": "50001681",
+		"FIELD2": "Seoul Franchise Branded",
+		"FIELD3": "8002",
+		"FIELD4": "Warner Bros. (Korea) Inc.",
+		"FIELD5": "61",
+		"FIELD6": "Branded Services",
+		"FIELD7": "6I",
+		"FIELD8": "Seoul"
+	}, {
+		"FIELD1": "50004779",
+		"FIELD2": "WBITDI Munich Format Sales",
+		"FIELD3": "2601",
+		"FIELD4": "WB Intl TV Dist Inc",
+		"FIELD5": "63",
+		"FIELD6": "Format",
+		"FIELD7": "6F",
+		"FIELD8": "Munich"
+	}, {
+		"FIELD1": "50006602",
+		"FIELD2": "Eyeworks",
+		"FIELD3": "6710",
+		"FIELD4": "null",
+		"FIELD5": "62",
+		"FIELD6": "Non-WB Hist. Sales",
+		"FIELD7": "6R",
+		"FIELD8": "Eyeworks"
+	}, {
+		"FIELD1": "50006626",
+		"FIELD2": "London Franchise",
+		"FIELD3": "6000",
+		"FIELD4": "WB Entertainment UK Ltd.",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6C",
+		"FIELD8": "London"
+	}, {
+		"FIELD1": "50006707",
+		"FIELD2": "Amsterdam Franchise",
+		"FIELD3": "6004",
+		"FIELD4": "WB Ent. Nederland B.V.",
+		"FIELD5": "null",
+		"FIELD6": "null",
+		"FIELD7": "null",
+		"FIELD8": "null"
+	}, {
+		"FIELD1": "50006709",
+		"FIELD2": "Madrid Franchise",
+		"FIELD3": "6505",
+		"FIELD4": "WB Ent Espana S.L.",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6D",
+		"FIELD8": "Madrid"
+	}, {
+		"FIELD1": "50006711",
+		"FIELD2": "Munich Franchise",
+		"FIELD3": "6014",
+		"FIELD4": "WB Entertainment GmbH",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6F",
+		"FIELD8": "Munich"
+	}, {
+		"FIELD1": "50006905",
+		"FIELD2": "WBEN_Madrid",
+		"FIELD3": "6004",
+		"FIELD4": "WB Ent. Nederland B.V.",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6D",
+		"FIELD8": "Madrid"
+	}, {
+		"FIELD1": "50006906",
+		"FIELD2": "WBEN_Moscow",
+		"FIELD3": "6004",
+		"FIELD4": "WB Ent. Nederland B.V.",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6N",
+		"FIELD8": "Moscow"
+	}, {
+		"FIELD1": "50007094",
+		"FIELD2": "Mumbai Franchise",
+		"FIELD3": "8413",
+		"FIELD4": "null",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6T",
+		"FIELD8": "Mumbai"
+	}, {
+		"FIELD1": "50007280",
+		"FIELD2": "WBEN_Munich",
+		"FIELD3": "6004",
+		"FIELD4": "WB Ent. Nederland B.V.",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6F",
+		"FIELD8": "Munich"
+	}, {
+		"FIELD1": "50005552",
+		"FIELD2": "PanAsia Franchise",
+		"FIELD3": "null",
+		"FIELD4": "null",
+		"FIELD5": "60",
+		"FIELD6": "Distribution",
+		"FIELD7": "6K",
+		"FIELD8": "Sydney"
+	}, {
+		"FIELD1": "50001746",
+		"FIELD2": "Format Sales",
+		"FIELD3": "6700",
+		"FIELD4": "WB Int'l TV Prod Ltd",
+		"FIELD5": "63",
+		"FIELD6": "Format",
+		"FIELD7": "6O",
+		"FIELD8": "WBITVP"
+	}]
+}

@@ -1,0 +1,126 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+	<Dialog title="Dimension Editor" stretch="false">
+		<content>
+			<l:VerticalLayout class="sapUiSmallMargin">
+				<l:HorizontalLayout>
+					<FormattedText htmlText="&lt;strong&gt;Add&lt;/strong&gt;" width="20em" />
+				</l:HorizontalLayout>
+				<l:HorizontalLayout>
+					<Text text="Media" width="20em"/>
+					<MultiInput id="multiMediaAdd" 
+					            showValueHelp="false" 
+					            showSuggestion="true"
+					            suggestionItems="{Media>/DATA}" 
+					            width="500px"
+					            enableMultiLineMode="true"
+					            placeholder="Enter Media ...">
+						<suggestionItems>
+							<core:Item text="{Media>VALUE} | {Media>KEY}" />
+						</suggestionItems>
+					</MultiInput>
+					<!--<MultiComboBox id="comboMediaAdd" width="500px" items="{ path: 'Media>/DATA', sorter: { path: 'Media>KEY' } }">-->
+					<!--	<core:Item key="{Media>KEY}" text="{Media>VALUE} | {Media>KEY}"/>-->
+					<!--</MultiComboBox>-->
+				</l:HorizontalLayout>
+				<l:HorizontalLayout>
+					<Text text="Territory" width="20em"/>
+					<MultiInput id="multiTerriAdd" 
+					            showValueHelp="false" 
+					            showSuggestion="true"
+					            suggestionItems="{Terri>/DATA}" 
+					            width="500px"
+					            enableMultiLineMode="true"
+					            placeholder="Enter Territory ...">
+						<suggestionItems>
+							<core:Item text="{Terri>VALUE} | {Terri>KEY}" />
+						</suggestionItems>
+					</MultiInput>
+					<!--	<MultiInput id="terr-add" showValueHelp="false" showSuggestion="true" suggest="loadEmpResp" width="20em"></MultiInput> -->
+					<!--<MultiComboBox id="comboTerriAdd" width="500px" items="{ path: 'Terri>/DATA', sorter: { path: 'Terri>KEY' } }">-->
+					<!--	<core:Item key="{Terri>VALUE}|{Terri>KEY}" text="{Terri>VALUE} | {Terri>KEY}"/>-->
+					<!--</MultiComboBox>-->
+				</l:HorizontalLayout>
+				<l:HorizontalLayout>
+					<Text text="Language" width="20em"/>
+					<MultiInput id="multiLanguAdd" 
+					            showValueHelp="false" 
+					            showSuggestion="true"
+					            suggestionItems="{Langu>/DATA}" 
+					            width="500px"
+					            enableMultiLineMode="true"
+					            placeholder="Enter Language ...">
+						<suggestionItems>
+							<core:Item text="{Langu>VALUE} | {Langu>KEY}" />
+						</suggestionItems>
+					</MultiInput>
+					<!--<MultiInput id="lang-add" showValueHelp="false" showSuggestion="true" suggest="loadEmpResp" width="20em"></MultiInput>-->
+					<!--<MultiComboBox id="comboLanguAdd" width="500px" items="{ path: 'Langu>/DATA', sorter: { path: 'Langu>KEY' } }">-->
+					<!--	<core:Item key="{Langu>VALUE}|{Langu>KEY}" text="{Langu>VALUE} | {Langu>KEY}"/>-->
+					<!--</MultiComboBox>-->
+				</l:HorizontalLayout>
+
+				<Text text="" width="20em" textAlign="Left"/>
+				<l:HorizontalLayout>
+					<FormattedText htmlText="&lt;strong&gt;Remove&lt;/strong&gt;" width="20em" />
+				</l:HorizontalLayout>
+				<l:HorizontalLayout>
+					<Text text="Media" width="20em"/>
+					<MultiInput id="multiMediaDel" 
+					            showValueHelp="false" 
+					            showSuggestion="true"
+					            suggestionItems="{Media>/DATA}" 
+					            width="500px"
+					            enableMultiLineMode="true"
+					            placeholder="Enter Media ...">
+						<suggestionItems>
+							<core:Item text="{Media>VALUE} | {Media>KEY}" />
+						</suggestionItems>
+					</MultiInput>
+					<!--<MultiComboBox id="comboMediaDel" width="500px" items="{ path: 'Media>/DATA', sorter: { path: 'Media>KEY' } }">-->
+					<!--	<core:Item key="{Media>KEY}" text="{Media>VALUE} | {Media>KEY}"/>-->
+					<!--</MultiComboBox>-->
+				</l:HorizontalLayout>
+				<l:HorizontalLayout>
+					<Text text="Territory" width="20em"/>
+					<MultiInput id="multiTerriDel" 
+					            showValueHelp="false" 
+					            showSuggestion="true"
+					            suggestionItems="{Terri>/DATA}" 
+					            width="500px"
+					            enableMultiLineMode="true"
+					            placeholder="Enter Territory ...">
+						<suggestionItems>
+							<core:Item text="{Terri>VALUE} | {Terri>KEY}" />
+						</suggestionItems>
+					</MultiInput>
+					<!--<MultiInput id="terr-delete" showValueHelp="false" showSuggestion="true" suggest="loadEmpResp" width="20em"></MultiInput>-->
+					<!--<MultiComboBox id="comboTerriDel" width="500px" items="{ path: 'Terri>/DATA', sorter: { path: 'Terri>KEY' } }">-->
+					<!--	<core:Item key="{Terri>VALUE}|{Terri>KEY}" text="{Terri>VALUE} | {Terri>KEY}"/>-->
+					<!--</MultiComboBox>-->
+				</l:HorizontalLayout>
+				<l:HorizontalLayout>
+					<Text text="Language" width="20em"/>
+					<MultiInput id="multiLanguDel" 
+					            showValueHelp="false" 
+					            showSuggestion="true"
+					            suggestionItems="{Langu>/DATA}" 
+					            width="500px"
+					            enableMultiLineMode="true"
+					            placeholder="Enter Language ...">
+						<suggestionItems>
+							<core:Item text="{Langu>VALUE} | {Langu>KEY}" />
+						</suggestionItems>
+					</MultiInput>
+					<!--<MultiInput id="lang-delete" showValueHelp="false" showSuggestion="true" suggest="loadEmpResp" width="20em"></MultiInput>-->
+					<!--<MultiComboBox id="comboLanguDel" width="500px" items="{ path: 'Langu>/DATA', sorter: { path: 'Langu>KEY' } }">-->
+					<!--	<core:Item key="{Langu>VALUE}|{Langu>KEY}" text="{Langu>VALUE} | {Langu>KEY}"/>-->
+					<!--</MultiComboBox>-->
+				</l:HorizontalLayout>
+			</l:VerticalLayout>
+		</content>
+		<buttons>
+			<Button text="Update" press="updateDimension"/>
+			<Button text="Cancel" press="closeDimension"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

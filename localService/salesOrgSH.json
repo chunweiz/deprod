@@ -1,0 +1,177 @@
+{
+	"DATA":[{
+		"KEY_FIELD":"50002026",
+		"VAL_FIELD":"Shed"
+	},{
+		"KEY_FIELD":"50002950",
+		"VAL_FIELD":"BlazzHoffski"
+	},{
+		"KEY_FIELD":"50005954",
+		"VAL_FIELD":"WBITDI Euro Regional Format Sales"
+	},{
+		"KEY_FIELD":"50001628",
+		"VAL_FIELD":"Burbank"
+	},{
+		"KEY_FIELD":"50001653",
+		"VAL_FIELD":"Euro Regional"
+	},{
+		"KEY_FIELD":"50001654",
+		"VAL_FIELD":"London"
+	},{
+		"KEY_FIELD":"50001940",
+		"VAL_FIELD":"Moscow"
+	},{
+		"KEY_FIELD":"50001655",
+		"VAL_FIELD":"Miami"
+	},{
+		"KEY_FIELD":"50001712",
+		"VAL_FIELD":"Madrid"
+	},{
+		"KEY_FIELD":"50001656",
+		"VAL_FIELD":"Munich"
+	},{
+		"KEY_FIELD":"50001657",
+		"VAL_FIELD":"Paris"
+	},{
+		"KEY_FIELD":"50001658",
+		"VAL_FIELD":"Rome"
+	},{
+		"KEY_FIELD":"50001659",
+		"VAL_FIELD":"Seoul"
+	},{
+		"KEY_FIELD":"50001660",
+		"VAL_FIELD":"Beijing"
+	},{
+		"KEY_FIELD":"50001661",
+		"VAL_FIELD":"Sydney"
+	},{
+		"KEY_FIELD":"50001662",
+		"VAL_FIELD":"Tokyo"
+	},{
+		"KEY_FIELD":"50001663",
+		"VAL_FIELD":"Toronto"
+	},{
+		"KEY_FIELD":"50001674",
+		"VAL_FIELD":"Tokyo Franchise"
+	},{
+		"KEY_FIELD":"50001676",
+		"VAL_FIELD":"Sydney Franchise"
+	},{
+		"KEY_FIELD":"50001678",
+		"VAL_FIELD":"Paris Franchise"
+	},{
+		"KEY_FIELD":"50001689",
+		"VAL_FIELD":"Burbank Branded"
+	},{
+		"KEY_FIELD":"50001695",
+		"VAL_FIELD":"Euro Regional Branded"
+	},{
+		"KEY_FIELD":"50001698",
+		"VAL_FIELD":"Rome Local Prod-Dist."
+	},{
+		"KEY_FIELD":"50001699",
+		"VAL_FIELD":"London Branded"
+	},{
+		"KEY_FIELD":"50001700",
+		"VAL_FIELD":"Madrid Branded"
+	},{
+		"KEY_FIELD":"50001740",
+		"VAL_FIELD":"Miami Branded"
+	},{
+		"KEY_FIELD":"50005825",
+		"VAL_FIELD":"WBITVP Finished Sales"
+	},{
+		"KEY_FIELD":"50001927",
+		"VAL_FIELD":"Munich Branded"
+	},{
+		"KEY_FIELD":"50001928",
+		"VAL_FIELD":"Rome Branded"
+	},{
+		"KEY_FIELD":"50001929",
+		"VAL_FIELD":"Beijing Branded"
+	},{
+		"KEY_FIELD":"50001931",
+		"VAL_FIELD":"Toronto Branded"
+	},{
+		"KEY_FIELD":"50001679",
+		"VAL_FIELD":"Paris Franchise Branded"
+	},{
+		"KEY_FIELD":"50001677",
+		"VAL_FIELD":"Sydney Franchise Branded"
+	},{
+		"KEY_FIELD":"50002106",
+		"VAL_FIELD":"Paris Branded"
+	},{
+		"KEY_FIELD":"50002107",
+		"VAL_FIELD":"Sydney Branded"
+	},{
+		"KEY_FIELD":"50002949",
+		"VAL_FIELD":"Seoul Branded"
+	},{
+		"KEY_FIELD":"50001675",
+		"VAL_FIELD":"Tokyo Franchise Branded"
+	},{
+		"KEY_FIELD":"50003091",
+		"VAL_FIELD":"WBITDI London Format Sales"
+	},{
+		"KEY_FIELD":"50003092",
+		"VAL_FIELD":"WBITDI Beijing Format Sales"
+	},{
+		"KEY_FIELD":"50003093",
+		"VAL_FIELD":"WBITDI Madrid Format Sales"
+	},{
+		"KEY_FIELD":"50003094",
+		"VAL_FIELD":"France Franchise Format Sales"
+	},{
+		"KEY_FIELD":"50004777",
+		"VAL_FIELD":"WBITDI Rome Format Sales"
+	},{
+		"KEY_FIELD":"50004778",
+		"VAL_FIELD":"WBITDI Sydney Format Sales"
+	},{
+		"KEY_FIELD":"50001680",
+		"VAL_FIELD":"Seoul Franchise"
+	},{
+		"KEY_FIELD":"50004901",
+		"VAL_FIELD":"WBITDI Toronto Format Sales"
+	},{
+		"KEY_FIELD":"50001681",
+		"VAL_FIELD":"Seoul Franchise Branded"
+	},{
+		"KEY_FIELD":"50004779",
+		"VAL_FIELD":"WBITDI Munich Format Sales"
+	},{
+		"KEY_FIELD":"50006602",
+		"VAL_FIELD":"Eyeworks"
+	},{
+		"KEY_FIELD":"50006626",
+		"VAL_FIELD":"London Franchise"
+	},{
+		"KEY_FIELD":"50006707",
+		"VAL_FIELD":"Amsterdam Franchise"
+	},{
+		"KEY_FIELD":"50006709",
+		"VAL_FIELD":"Madrid Franchise"
+	},{
+		"KEY_FIELD":"50006711",
+		"VAL_FIELD":"Munich Franchise"
+	},{
+		"KEY_FIELD":"50006905",
+		"VAL_FIELD":"WBEN_Madrid"
+	},{
+		"KEY_FIELD":"50006906",
+		"VAL_FIELD":"WBEN_Moscow"
+	},{
+		"KEY_FIELD":"50007094",
+		"VAL_FIELD":"Mumbai Franchise"
+	},{
+		"KEY_FIELD":"50007280",
+		"VAL_FIELD":"WBEN_Munich"
+	},{
+		"KEY_FIELD":"50005552",
+		"VAL_FIELD":"PanAsia Franchise"
+	},{
+		"KEY_FIELD":"50001746",
+		"VAL_FIELD":"Format Sales"
+	}]
+}

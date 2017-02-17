@@ -1,0 +1,197 @@
+<mvc:View controllerName="wb.cosmos.dealapp.controller.LicenseFeeTable" 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:table="sap.ui.table"
+	xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified"
+	xmlns:core="sap.ui.core">
+	
+        <table:Table
+            id="wb-licenseeFee"
+            visibleRowCount="7"
+            fixedColumnCount="2"
+           
+            selectionMode="None">
+				<table:toolbar>
+					<Toolbar>
+						<content>
+							<Button
+								icon="sap-icon://refresh"
+								tooltip="Refresh"
+								press="_rebindTable"
+								enabled="{oViewModel>/editable}"/>
+							<u:FileUploader
+								uploadUrl = ""
+								tooltip="Upload"
+								maximumFileSize = "1"
+								buttonText = " "
+								buttonOnly = "true"
+								sameFilenameAllowed = "true"
+								icon = "sap-icon://upload"  
+								enabled = "{oViewModel>/editable}"
+								change = "handleCSVUploaded"/>
+							<Button
+								icon="sap-icon://excel-attachment"
+								tooltip="Download Saved Data"
+								press="getExcel"
+								enabled="{oViewModel>/editable}"/>
+						<Button
+							icon="sap-icon://decline"
+							tooltip="Clear all filters"
+							press="clearAllFilters"/>						
+							<!--<Button-->
+							<!--	icon="sap-icon://action-settings"-->
+							<!--	tooltip="Personalization"-->
+							<!--	press="openP13n"-->
+							<!--	enabled="{oViewModel>/editable}"/>-->
+
+						</content>
+					</Toolbar>
+				</table:toolbar>
+        	<table:columns>
+					<table:Column width="3rem" sortProperty="DealChanged" >
+						<Label text=" "/>
+						<table:template templateShareable ="false">
+							<CheckBox selected="{ path: 'oTableModel>DealChanged', type: 'sap.ui.model.type.String' }" enabled="{oViewModel>/editable}"/>
+						</table:template>
+					</table:Column>
+					<table:Column id="ScopeID" width="6rem" sortProperty="ScopeID" filterProperty="ScopeID" 
+								  filterType="sap.ui.model.type.Integer">
+						<Label text="Scope ID"/>
+						<table:template templateShareable ="false">
+							<Label text="{
+											path: 'oTableModel>ScopeID',
+											type: 'sap.ui.model.type.Integer'
+										}"/> 
+						</table:template>	
+					</table:Column>
+					<table:Column width="8rem" sortProperty="ScopeStatus" filterProperty="ScopeStatus">
+						<Label text="Scope Status"/>
+						<table:template templateShareable ="false">
+							<Text text="{oTableModel>ScopeStatus}" wrapping="false"/>
+						</table:template>
+					</table:Column>						
+					<table:Column width="15rem" sortProperty="IP_TITLE" filterProperty="IP_TITLE">
+						<Label text="IP Title"/>
+						<table:template templateShareable ="false" >
+							<l:VerticalLayout class="sapUiSmallMargin">
+								<Text text="{oTableModel>IP_TITLE}" wrapping="false" />
+								<Text text="{oTableModel>IPID}" wrapping="false"/>
+							</l:VerticalLayout>
+						</table:template>
+					</table:Column>
+					<table:Column width="6rem" sortProperty="PeriodID" filterProperty="PeriodText">
+						<Label text="Period ID"/>
+						<table:template templateShareable ="false">
+							<ComboBox id = "PeriodCombo" items="{ path: 'PeriodID>/', sorter: { path: 'PeriodID>PrdDesc' } }" selectedKey="{oTableModel>PeriodID}" enabled="{oViewModel>/editable}" selectionChange="selectRow">
+								<core:Item key="{PeriodID>PrdID}" text="{PeriodID>PrdID} {PeriodID>PrdDesc}"/>
+							</ComboBox>
+						</table:template>
+					</table:Column>
+					<table:Column width="6rem" sortProperty="RoyaltyCatg" filterProperty="CatText">
+						<Label text="Royalty Cat"/>
+						<table:template templateShareable ="false">
+							<ComboBox id = "RoyaltyCombo" items="{ path: 'RoyaltyCatg>/', sorter: { path: 'RoyaltyCatg>RoyCatDesc' } }" selectedKey="{oTableModel>RoyaltyCatg}" enabled="{oViewModel>/editable}" selectionChange="selectRow">
+								<core:Item key="{RoyaltyCatg>RoyCat}" text="{RoyaltyCatg>RoyCat} {RoyaltyCatg>RoyCatDesc}"/>
+							</ComboBox>
+						</table:template>
+					</table:Column>
+					<table:Column width="7rem" sortProperty="ValidFrom" filterProperty="ValidFrom">
+						<Label text="Valid From"/>
+						<table:template templateShareable ="false">
+							<!--<Text text="{ path: 'oTableModel>ValidFrom', -->
+							<!--			  formatter: 'util.Formatter.DateDdMonYyyy'-->
+							<!--			}" /> -->
+							<DatePicker id="dpValidFromLF"
+										value="{ path: 'oTableModel>ValidFrom',
+												 pattern: 'yyyyMMdd',
+												 strictParsing: true
+										       }"
+										valueFormat = "yyyyMMdd"
+										enabled="false"/>
+						</table:template>
+					</table:Column>
+					<table:Column width="6rem" sortProperty="ValidFromStatus" filterProperty="ValidFromStatus">
+						<Label text="Valid From Status"/>
+						<table:template templateShareable ="false">
+							<Text text="{oTableModel>ValidFromStatus}"/>
+						</table:template> 
+					</table:Column>
+					<table:Column width="7rem" sortProperty="ValidTo" filterProperty="ValidTo">
+						<Label text="Valid To"/>
+						<table:template templateShareable ="false">
+							<!--<Text text="{ path: 'oTableModel>ValidTo', -->
+							<!--			  formatter: 'util.Formatter.DateDdMonYyyy'-->
+							<!--			}" />  -->
+							<DatePicker id="dpValidToLF"
+										value="{ path: 'oTableModel>ValidTo',
+												 pattern: 'yyyyMMdd',
+												 strictParsing: true
+										       }"
+										valueFormat = "yyyyMMdd"
+										enabled="false"/>
+						</table:template>
+					</table:Column>
+					<table:Column width="6rem" sortProperty="ValidToStatus" filterProperty="ValidToStatus">
+						<Label text="Valid To Status"/>
+						<table:template templateShareable ="false">
+							<Text text="{oTableModel>ValidToStatus}"/>
+						</table:template>
+					</table:Column>
+					<table:Column width="6rem" sortProperty="LicenseFeePerIncrement" filterProperty="LicenseFeePerIncrement" filterType="sap.ui.model.type.Float">
+						<Label text="License Fee Per Increment"/>
+						<table:template templateShareable ="false">
+						<Input value="{	path : 'oTableModel>LicenseFeePerIncrement',
+											type: 'sap.ui.model.type.Float',
+											formatOptions : {	minFractionDigits: 2 ,
+																groupingEnabled: true
+															 }}"
+								   enabled ="{oViewModel>/editable}"
+							      liveChange="selectRowLFInc"
+							       valueLiveUpdate = "false" />
+		
+						</table:template>
+					</table:Column>
+					<table:Column width="6rem" sortProperty="NumOfIncrement" filterProperty="NumOfIncrement"
+								  filterType="sap.ui.model.type.Integer"> 
+						<Label text="Num of Increment"/>
+						<table:template templateShareable ="false">
+							<Input value="{ path: 'oTableModel>NumOfIncrement',
+											type: 'sap.ui.model.type.Integer',
+											formatOptions : {	maxFractionDigits: 0 }
+										  }" 
+										  enabled="{= ${oTableModel>NumOfIncrement} === 0 ? false : ${oViewModel>/editable} }"
+										  liveChange="selectRowNumInc"
+										  valueLiveUpdate = "false"/> 
+						</table:template>
+					</table:Column>
+					<table:Column width="6rem" sortProperty="ProtectPricingFlag" filterProperty="ProtectPricingFlagFil">
+						<Label text="Protect Pricing"/>
+						<table:template templateShareable ="false">
+							<CheckBox selected="{ path: 'oTableModel>ProtectPricingFlag', type: 'sap.ui.model.type.String' }" enabled ="{oViewModel>/editable}" select="selectRow"/>
+						</table:template>
+					</table:Column>
+					<table:Column width="6rem" sortProperty="TotalLicenseFee" filterProperty="TotalLicenseFee">
+						<Label text="Total License Fee"/>
+						<table:template templateShareable ="false">
+							<!-- <Text text="{oTableModel>TotalLicenseFee}"/> -->
+							<Text text="{	path: 'oTableModel>TotalLicenseFee',
+											type: 'sap.ui.model.type.Float', 
+											formatOptions : {	minFractionDigits: 2 ,
+																groupingEnabled: true,
+																groupingSeparator : ',',
+																decimalSeparator : '.' }
+										}"/>
+						</table:template>
+					</table:Column>
+					<table:Column width="6rem" sortProperty="Currency" filterProperty="Currency"
+								  filterType="sap.ui.model.type.Currency">
+						<Label text="Currency"/>
+						<table:template templateShareable ="false">
+							<Text text="{oTableModel>Currency}"/>
+						</table:template>
+					</table:Column>
+				</table:columns>
+        </table:Table>
+        
+</mvc:View>

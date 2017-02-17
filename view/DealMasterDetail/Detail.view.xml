@@ -1,0 +1,54 @@
+<mvc:View controllerName="wb.cosmos.dealapp.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:l="sap.ui.layout" xmlns:footerbar="sap.ushell.ui.footerbar">
+			
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
+		enableScrolling="true" busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:customHeaderContent>
+			<Button id="fullScreenBtn" icon="sap-icon://full-screen" press="onToggleFullScreen"/>
+		</semantic:customHeaderContent>
+
+		<l:VerticalLayout class="sapUiSmallMargin">
+			<l:HorizontalLayout>
+				<Text text="Deal ID : {localModel>/DealID}" width="500px"/>
+				<Text text="Description : {localModel>/Description}" />
+			</l:HorizontalLayout>
+			<l:HorizontalLayout>
+				<Text text="Licensee ID : {localModel>/LicenseeId}" width="500px"/>
+				<Text text="Licensee Name : {localModel>/LicenseeName}" />
+			</l:HorizontalLayout>
+			<l:HorizontalLayout>
+				<Text text="Deal Status : {localModel>/Status}" width="500px"/>
+			</l:HorizontalLayout>
+		</l:VerticalLayout>
+		<IconTabBar id="idIconTabBarNoIcons" >
+			<items>
+				<IconTabFilter icon="sap-icon://money-bills" iconColor="Positive" text="Licensee Fee">
+					<mvc:XMLView id="LFeeTab" viewName="wb.cosmos.dealapp.view.DealMasterDetail.DetailTabs.LicenseFeeTable" height="100%"></mvc:XMLView>
+				</IconTabFilter>
+					<IconTabFilter icon="sap-icon://order-status" iconColor="Positive" text="Rights Maintenance">
+					<mvc:XMLView id="RightsTab" viewName="wb.cosmos.dealapp.view.DealMasterDetail.DetailTabs.RightsTable" height="100%"></mvc:XMLView>
+				</IconTabFilter> 
+				<IconTabFilter icon="sap-icon://globe" iconColor="Positive" text="Rights Dimensions">
+					<mvc:XMLView id="RightsDimTab" viewName="wb.cosmos.dealapp.view.DealMasterDetail.DetailTabs.RightsDimTable" height="100%"></mvc:XMLView>
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+		
+		<l:VerticalLayout class="sapUiSmallMargin">
+		<FlexBox
+			height="2px"
+			alignItems="Start"
+			justifyContent="Start">
+		</FlexBox>
+		</l:VerticalLayout>
+		<semantic:customFooterContent>
+			<Button icon="sap-icon://message-popup" text="{msgCount>/count}" type="Emphasized"
+						press="handleMessagePopoverPress"/>
+		</semantic:customFooterContent>
+		<semantic:positiveAction>
+			<semantic:PositiveAction id="Save" text="Save" press="onSave"/>
+		</semantic:positiveAction>
+
+
+	</semantic:DetailPage>
+</mvc:View>

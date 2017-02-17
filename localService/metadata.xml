@@ -1,0 +1,198 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='CMD_U5C_100')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1"/>
+    </edmx:Reference>
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='CMD_U5C_100')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='CMD_U5C_100')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='CMD_U5C_100')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1"/>
+    </edmx:Reference>
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='CMD_U5C_100')/$value">
+        <edmx:Include Namespace="Org.OData.Measures.V1"/>
+    </edmx:Reference>
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_TIMELINE',Version='0001',SAP__Origin='CMD_U5C_100')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Timeline.v1"/>
+    </edmx:Reference>
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='CMD_U5C_100')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZV_DEAL_SRV" xml:lang="en" sap:schema-version="1">
+            <EntityType Name="DealDimension" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ItemGuid"/>
+                </Key>
+                <Property Name="ItemGuid" Type="Edm.Guid" Nullable="false" sap:label="UUID"/>
+                <Property Name="DealID" Type="Edm.String" Nullable="false"/>
+                <Property Name="ParentID" Type="Edm.String" Nullable="false"/>
+                <Property Name="Media" Type="Edm.String" Nullable="false"/>
+                <Property Name="Territory" Type="Edm.String" Nullable="false"/>
+                <Property Name="Language" Type="Edm.String" Nullable="false"/>
+                <Property Name="RightsType" Type="Edm.String" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="DealHeader" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="DealID"/>
+                </Key>
+                <Property Name="DealID" Type="Edm.String" Nullable="false"/>
+                <Property Name="ProcessType" Type="Edm.String" Nullable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false"/>
+                <Property Name="LicenseeId" Type="Edm.String" Nullable="false"/>
+                <Property Name="LicenseeName" Type="Edm.String" Nullable="false"/>
+                <Property Name="LicensorId" Type="Edm.String" Nullable="false"/>
+                <Property Name="LicensorName" Type="Edm.String" Nullable="false"/>
+                <NavigationProperty Name="DealRightsSet" Relationship="ZV_DEAL_SRV.DealHeaderToDealRights" FromRole="FromRole_DealHeaderToDealRights" ToRole="ToRole_DealHeaderToDealRights"/>
+                <NavigationProperty Name="DealLicenseFeeSet" Relationship="ZV_DEAL_SRV.DealHeaderToDealLicenseeFee" FromRole="FromRole_DealHeaderToDealLicenseeFee" ToRole="ToRole_DealHeaderToDealLicenseeFee"/>
+                <NavigationProperty Name="DealDimensionSet" Relationship="ZV_DEAL_SRV.DealHeaderToDealDimension" FromRole="FromRole_DealHeaderToDealDimension" ToRole="ToRole_DealHeaderToDealDimension"/>
+                <NavigationProperty Name="DealMessageSet" Relationship="ZV_DEAL_SRV.DealHeaderToDealMessage" FromRole="FromRole_DealHeaderToDealMessage" ToRole="ToRole_DealHeaderToDealMessage"/>
+            </EntityType>
+            <EntityType Name="DealLicenseFee" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ItemGuid"/>
+                </Key>
+                <Property Name="ItemGuid" Type="Edm.Guid" Nullable="false" sap:label="UUID"/>
+                <Property Name="DealID" Type="Edm.String" Nullable="false"/>
+                <Property Name="ScopeID" Type="Edm.String" Nullable="false"/>
+                <Property Name="ScopeStatus" Type="Edm.String" Nullable="false"/>
+                <Property Name="IP_TITLE" Type="Edm.String" Nullable="false"/>
+                <Property Name="IPID" Type="Edm.String" Nullable="false"/>
+                <Property Name="ValidFrom" Type="Edm.DateTime" Nullable="false" Precision="0" sap:label="Time Stamp"/>
+                <Property Name="ValidFromStatus" Type="Edm.String" Nullable="false"/>
+                <Property Name="ValidTo" Type="Edm.DateTime" Nullable="false" Precision="0" sap:label="Time Stamp"/>
+                <Property Name="ValidToStatus" Type="Edm.String" Nullable="false"/>
+                <Property Name="LicenseFeePerIncrement" Type="Edm.String" Nullable="false"/>
+                <Property Name="NumOfIncrement" Type="Edm.String" Nullable="false"/>
+                <Property Name="ProtectPricingFlag" Type="Edm.String" Nullable="false"/>
+                <Property Name="TotalLicenseFee" Type="Edm.String" Nullable="false"/>
+                <Property Name="Currency" Type="Edm.String" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="DealRights" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ItemGuid"/>
+                </Key>
+                <Property Name="ItemGuid" Type="Edm.Guid" Nullable="false" sap:label="UUID"/>
+                <Property Name="DealID" Type="Edm.String" Nullable="false"/>
+                <Property Name="ScopeID" Type="Edm.String" Nullable="false"/>
+                <Property Name="ScopeType" Type="Edm.String" Nullable="false"/>
+                <Property Name="IPTitle" Type="Edm.String" Nullable="false"/>
+                <Property Name="IPNumber" Type="Edm.String" Nullable="false"/>
+                <Property Name="PeriodYearID" Type="Edm.String" Nullable="false"/>
+                <Property Name="PeriodYearGroup" Type="Edm.String" Nullable="false"/>
+                <Property Name="ScopeStatus" Type="Edm.String" Nullable="false"/>
+                <Property Name="ValidFrom" Type="Edm.DateTime" Nullable="false" Precision="0" sap:label="Time Stamp"/>
+                <Property Name="ValidFromStatus" Type="Edm.String" Nullable="false"/>
+                <Property Name="ValidTo" Type="Edm.DateTime" Nullable="false" Precision="0" sap:label="Time Stamp"/>
+                <Property Name="ValidToStatus" Type="Edm.String" Nullable="false"/>
+                <Property Name="Exclusivity" Type="Edm.String" Nullable="false"/>
+                <Property Name="RunsUOM1" Type="Edm.String" Nullable="false"/>
+                <Property Name="RunsUOMUnit1" Type="Edm.String" Nullable="false"/>
+                <Property Name="RunsUOM2" Type="Edm.String" Nullable="false"/>
+                <Property Name="RunsUOMUnit2" Type="Edm.String" Nullable="false"/>
+                <Property Name="RunsUOM3" Type="Edm.String" Nullable="false"/>
+                <Property Name="RunsUOMUnit3" Type="Edm.String" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="DealMessage" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="DealID"/>
+                </Key>
+                <Property Name="DealID" Type="Edm.String" Nullable="false"/>
+                <Property Name="MessageType" Type="Edm.String" Nullable="false"/>
+                <Property Name="MessageContent" Type="Edm.String" Nullable="false"/>
+            </EntityType>
+            <Association Name="DealHeaderToDealLicenseeFee" sap:content-version="1">
+                <End Type="ZV_DEAL_SRV.DealHeader" Multiplicity="1" Role="FromRole_DealHeaderToDealLicenseeFee"/>
+                <End Type="ZV_DEAL_SRV.DealLicenseFee" Multiplicity="*" Role="ToRole_DealHeaderToDealLicenseeFee"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_DealHeaderToDealLicenseeFee">
+                        <PropertyRef Name="DealID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_DealHeaderToDealLicenseeFee">
+                        <PropertyRef Name="DealID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="DealHeaderToDealDimension" sap:content-version="1">
+                <End Type="ZV_DEAL_SRV.DealHeader" Multiplicity="1" Role="FromRole_DealHeaderToDealDimension"/>
+                <End Type="ZV_DEAL_SRV.DealDimension" Multiplicity="*" Role="ToRole_DealHeaderToDealDimension"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_DealHeaderToDealDimension">
+                        <PropertyRef Name="DealID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_DealHeaderToDealDimension">
+                        <PropertyRef Name="DealID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="DealHeaderToDealMessage" sap:content-version="1">
+                <End Type="ZV_DEAL_SRV.DealHeader" Multiplicity="1" Role="FromRole_DealHeaderToDealMessage"/>
+                <End Type="ZV_DEAL_SRV.DealMessage" Multiplicity="*" Role="ToRole_DealHeaderToDealMessage"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_DealHeaderToDealMessage">
+                        <PropertyRef Name="DealID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_DealHeaderToDealMessage">
+                        <PropertyRef Name="DealID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="DealHeaderToDealRights" sap:content-version="1">
+                <End Type="ZV_DEAL_SRV.DealHeader" Multiplicity="1" Role="FromRole_DealHeaderToDealRights"/>
+                <End Type="ZV_DEAL_SRV.DealRights" Multiplicity="*" Role="ToRole_DealHeaderToDealRights"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_DealHeaderToDealRights">
+                        <PropertyRef Name="DealID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_DealHeaderToDealRights">
+                        <PropertyRef Name="DealID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZV_DEAL_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="DealDimensionSet" EntityType="ZV_DEAL_SRV.DealDimension" sap:content-version="1"/>
+                <EntitySet Name="DealHeaderSet" EntityType="ZV_DEAL_SRV.DealHeader" sap:content-version="1"/>
+                <EntitySet Name="DealLicenseeFeeSet" EntityType="ZV_DEAL_SRV.DealLicenseFee" sap:content-version="1"/>
+                <EntitySet Name="DealRightsSet" EntityType="ZV_DEAL_SRV.DealRights" sap:content-version="1"/>
+                <EntitySet Name="DealMessageSet" EntityType="ZV_DEAL_SRV.DealMessage" sap:content-version="1"/>
+                <AssociationSet Name="DealHeaderToDealMessageSet" Association="ZV_DEAL_SRV.DealHeaderToDealMessage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="DealHeaderSet" Role="FromRole_DealHeaderToDealMessage"/>
+                    <End EntitySet="DealMessageSet" Role="ToRole_DealHeaderToDealMessage"/>
+                </AssociationSet>
+                <AssociationSet Name="DealHeaderToDealLicenseeFeeSet" Association="ZV_DEAL_SRV.DealHeaderToDealLicenseeFee" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="DealHeaderSet" Role="FromRole_DealHeaderToDealLicenseeFee"/>
+                    <End EntitySet="DealLicenseeFeeSet" Role="ToRole_DealHeaderToDealLicenseeFee"/>
+                </AssociationSet>
+                <AssociationSet Name="DealHeaderToDealRightsSet" Association="ZV_DEAL_SRV.DealHeaderToDealRights" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="DealHeaderSet" Role="FromRole_DealHeaderToDealRights"/>
+                    <End EntitySet="DealRightsSet" Role="ToRole_DealHeaderToDealRights"/>
+                </AssociationSet>
+                <AssociationSet Name="DealHeaderToDealDimensionSet" Association="ZV_DEAL_SRV.DealHeaderToDealDimension" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="DealHeaderSet" Role="FromRole_DealHeaderToDealDimension"/>
+                    <End EntitySet="DealDimensionSet" Role="ToRole_DealHeaderToDealDimension"/>
+                </AssociationSet>
+                <FunctionImport Name="isDealLocked" ReturnType="ZV_DEAL_SRV.DealHeader" EntitySet="DealHeaderSet" m:HttpMethod="GET" sap:action-for="ZV_DEAL_SRV.DealHeader">
+                    <Parameter Name="HeaderGuid" Type="Edm.Guid" Mode="In"/>
+                </FunctionImport>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZV_DEAL_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZV_DEAL_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

@@ -1,0 +1,138 @@
+<mvc:View controllerName="wb.cosmos.dealapp.controller.RightsDimTable" 
+	xmlns="sap.m" 
+	xmlns:common="sap.ui.commons"
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:table="sap.ui.table"
+	xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified"
+	xmlns:core="sap.ui.core">
+        <table:Table
+            id="wb-RightsDim"
+            visibleRowCount="7"
+            fixedColumnCount="2"
+            selectionMode="None">
+				<table:toolbar>
+					<Toolbar>
+						<content>
+							<Button
+								icon="sap-icon://multiselect-all"
+								tooltip="Select/Deselect All"
+								press="selectAll"
+								enabled="{oViewModel>/editable}"/>
+							<Button
+								icon="sap-icon://edit"
+								tooltip="Edit"
+								press="editDimension"
+								enabled="{oViewModel>/editable}"
+								/>
+							<Button
+								icon="sap-icon://refresh"
+								tooltip="Refresh"
+								press="_rebindTable"
+								enabled="{oViewModel>/editable}"/>
+							<!--<u:FileUploader-->
+							<!--	uploadUrl = ""-->
+							<!--	fileType = "csv"-->
+							<!--	maximumFileSize = "1"-->
+							<!--	buttonText = " "-->
+							<!--	buttonOnly = "true"-->
+							<!--	icon = "sap-icon://upload"  -->
+							<!--	enabled = "{oViewModel>/editable}"-->
+							<!--	change = "handleCSVUploaded"/>-->
+							<Button
+								icon="sap-icon://excel-attachment"
+								tooltip="Download Saved Data"
+								press="getExcel"
+								enabled="{oViewModel>/editable}"/>
+							<Button
+							icon="sap-icon://decline"
+							tooltip="Clear all filters"
+							press="clearAllFilters"/>
+							<!--<Button-->
+							<!--	icon="sap-icon://action-settings"-->
+							<!--	tooltip="Personalization"-->
+							<!--	press="openP13n"-->
+							<!--	enabled="{oViewModel>/editable}"/>-->
+						</content>
+					</Toolbar>
+				</table:toolbar>
+        	<table:columns>
+        			<table:Column width="3rem" sortProperty="DealChanged" >
+						<Label text=" "/>
+						<table:template templateShareable ="false">
+							<CheckBox selected="{ path: 'oTableModel>DealChanged', type: 'sap.ui.model.type.String' }" enabled="{oViewModel>/editable}"/>
+						</table:template>
+					</table:Column>
+					<table:Column id="RightsScopeID" width="6rem" sortProperty="ScopeID" filterProperty="ScopeID" 
+								  filterType="sap.ui.model.type.Integer">
+						<Label text="Rights Scope / Group ID"/>
+						<table:template templateShareable ="false">
+							<Label text="{
+											path: 'oTableModel>ScopeID',
+											type: 'sap.ui.model.type.Integer'
+										}"/> 
+						</table:template>	
+					</table:Column>	
+					<table:Column width="10rem" sortProperty="IPtitle" filterProperty="IPtitle">
+						<Label text="IP Title"/>
+						<table:template templateShareable ="false" >
+							<l:VerticalLayout class="sapUiSmallMargin">
+								<Text text="{oTableModel>IPtitle}" wrapping="false"/>
+								<Text text="{oTableModel>IPID}" wrapping="false"/>
+							</l:VerticalLayout>
+						</table:template>
+					</table:Column>
+		
+					<table:Column id="RoyScopeID" width="6rem" sortProperty="ParentID" filterProperty="ParentID" 
+								  filterType="sap.ui.model.type.Integer">
+						<Label text="Scope ID"/>
+						<table:template templateShareable ="false">
+							<Label text="{
+											path: 'oTableModel>ParentID',
+											type: 'sap.ui.model.type.Integer'
+										}"/> 
+						</table:template>	
+					</table:Column>
+					<table:Column id="RightsGroup" width="6rem" sortProperty="RightsGroup" filterProperty="RightsGroup" 
+								  filterType="sap.ui.model.type.Integer">
+						<Label text="Rights Group"/>
+						<table:template templateShareable ="false">
+							<Label text="{
+											path: 'oTableModel>RightsGroup',
+											type: 'sap.ui.model.type.Integer'
+										}"/> 
+						</table:template>	
+					</table:Column>					
+					<table:Column width="2rem" sortProperty="RightsType" filterProperty="RightsType">
+						<Label text="Rights Type"/>
+						<table:template templateShareable ="false">
+							<Text text="{oTableModel>RightsType}"/>
+						</table:template>
+					</table:Column>
+					<table:Column width="8rem" sortProperty="Media" filterProperty="Media">
+						<Label text="Media"/>
+						<table:template templateShareable ="false">
+							<Text id="txtMedia" text="{oTableModel>Media}" wrapping="false" tooltip="{oTableModel>Media}"/>
+								<!--<tooltip>-->
+									<!--<common:RichTooltip text="{oTableModel>Media}"/>-->
+								<!--	<Popover content="{oTableModel>Media}">-->
+								<!--	</Popover>-->
+								<!--</tooltip>-->
+							<!--</Text>-->
+						</table:template>
+					</table:Column>	
+					<table:Column width="8rem" sortProperty="Territory" filterProperty="Territory">
+						<Label text="Territory"/>
+						<table:template templateShareable ="false">
+							<Text text="{oTableModel>Territory}" wrapping="false" tooltip="{oTableModel>Territory}"/>
+						</table:template>
+					</table:Column>	
+					<table:Column width="8rem" sortProperty="Language" filterProperty="Language">
+						<Label text="Language"/>
+						<table:template templateShareable ="false">
+							<Text text="{oTableModel>Language}" wrapping="false" tooltip="{oTableModel>Language}"/>
+						</table:template>
+					</table:Column>
+				</table:columns>
+        </table:Table>
+</mvc:View>

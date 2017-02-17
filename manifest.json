@@ -1,0 +1,280 @@
+{
+    "_version": "1.1.0",
+    "sap.app": {
+        "_version": "1.1.0",
+        "id": "wb.cosmos.dealapp",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "dataSources": {
+            "UserFormatHelpService": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getUserFormat",
+                "type": "JSON"
+            },
+            "SOSearchHelpService": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getDivDistCC",
+                "type": "JSON"
+            },
+            "RepMedSearchHelpService": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getRepMedia",
+                "type": "JSON"
+            },
+            "RepTerSearchHelpService": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getRepTerri",
+                "type": "JSON"
+            },
+            "DealStatSearchHelpService": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getDealStat",
+                "type": "JSON"
+            },
+            "BOURL": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getBOURL",
+                "type": "JSON"
+            },
+            "BOParameter": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getBOParameter",
+                "type": "JSON"
+            },
+            "COStatSearchHelpService": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getCOStat",
+                "type": "JSON"
+            },
+            "RoyStatSearchHelpService": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getRoyScStat",
+                "type": "JSON"
+            },
+            "TarCurrSearchHelpService": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getTarCurr",
+                "type": "JSON"
+            },
+            "TranTypeSearchHelpService": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getTranType",
+                "type": "JSON"
+            },
+            "MediaRightsDimension": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getMedia",
+                "type": "JSON"
+            },
+            "TerriRightsDimension": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getTerri",
+                "type": "JSON"
+            },
+            "LanguRightsDimension": {
+                "uri": "/sap/bc/zxsjs_proxy?cmd=getLangu",
+                "type": "JSON"
+            },
+            "Result": {
+                "uri": "./localService/dealQuery.json",
+                "type": "JSON"
+            },
+            "mainService": {
+                "uri": "/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/metadata.xml"
+                }
+            },
+            "ZV_DEAL_SRV": {
+                "uri": "/sap/opu/odata/sap/ZV_DEAL_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "webapp/localService/metadata.xml"
+                }
+            },
+            "ZV_DEAL_SRH_HELP_SRV": {
+                "uri": "/sap/opu/odata/sap/ZV_DEAL_SRH_HELP_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "webapp/localService/ZV_DEAL_SRH_HELP_SRV/metadata.xml"
+                }
+            },
+            "ZV_USER_FORMAT_SRV": {
+                "uri": "/sap/opu/odata/sap/ZV_USER_FORMAT_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/ZV_USER_FORMAT_SRV/metadata.xml"
+                }
+            }
+        },
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "sourceTemplate": {
+            "id": "servicecatalog.connectivityComponent",
+            "version": "0.0.0"
+        }
+    },
+    "sap.ui": {
+        "_version": "1.1.0",
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": false
+        },
+        "supportedThemes": [
+            "sap_bluecrystal"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.1.0",
+        "rootView": "wb.cosmos.dealapp.view.App",
+        "dependencies": {
+            "minUI5Version": "1.30",
+            "libs": {
+                "sap.m": {}
+            }
+        },
+        "config": {
+            "searchHelpLocal": "localService/searchHelp.json",
+            "searchHelpRemote": "/sap/bc/zxsjs_proxy?cmd=getDivDistCC",
+            "fullWidth": "true"
+        },
+        "models": {
+            "SOSearchHelp": {
+                "dataSource": "SOSearchHelpService"
+            },
+            "UserFormatHelp": {
+                "dataSource": "UserFormatHelpService",
+                "preload": true
+            },
+            "RepMedSearchHelp": {
+                "dataSource": "RepMedSearchHelpService"
+            },
+            "RepTerSearchHelp": {
+                "dataSource": "RepTerSearchHelpService"
+            },
+            "DealStatSearchHelp": {
+                "dataSource": "DealStatSearchHelpService"
+            },
+            "COStatSearchHelp": {
+                "dataSource": "COStatSearchHelpService"
+            },
+            "RoyStatSearchHelp": {
+                "dataSource": "RoyStatSearchHelpService"
+            },
+            "TarCurrSearchHelp": {
+                "dataSource": "TarCurrSearchHelpService"
+            },
+            "BOUrlHelp": {
+                "dataSource": "BOURL"
+            },
+            "BOParameterHelp": {
+                "dataSource": "BOParameter"
+            },
+            "TranTypeSearchHelp": {
+                "dataSource": "TranTypeSearchHelpService"
+            },
+            "MediaSearchHelp": {
+                "dataSource": "MediaRightsDimension"
+            },
+            "TerriSearchHelp": {
+                "dataSource": "TerriRightsDimension"
+            },
+            "LanguSearchHelp": {
+                "dataSource": "LanguRightsDimension"
+            },
+            "dealInfo": {
+                "dataSource": "ZV_DEAL_SRV"
+            },
+            "dealSearchHelp": {
+                "dataSource": "ZV_DEAL_SRH_HELP_SRV"
+            },
+            "dealUserFormat": {
+                "dataSource": "ZV_USER_FORMAT_SRV"
+            },
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "wb.cosmos.dealapp.i18n.i18n"
+                }
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "wb.cosmos.dealapp.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "bypassed": {
+                    "target": "notFound"
+                }
+            },
+            "routes": [
+                {
+                    "name": "search",
+                    "pattern": "",
+                    "target": [
+                        "home"
+                    ]
+                },
+                {
+                    "name": "masterRoute",
+                    "pattern": "MasterDetail",
+                    "target": [
+                        "detailTarget",
+                        "masterTarget"
+                    ]
+                },
+                {
+                    "name": "detailRoute",
+                    "pattern": "detail/{id}",
+                    "target": [
+                        "masterTarget",
+                        "detailTarget"
+                    ]
+                }
+            ],
+            "targets": {
+                "splitviewTarget": {
+                    "viewName": "DealMasterDetail/DealMasterDetail"
+                },
+                "masterTarget": {
+                    "viewName": "DealMasterDetail/Master",
+                    "parent": "splitviewTarget",
+                    "controlId": "SplitContainer",
+                    "controlAggregation": "masterPages"
+                },
+                "detailTarget": {
+                    "viewName": "DealMasterDetail/Detail",
+                    "parent": "splitviewTarget",
+                    "controlId": "SplitContainer",
+                    "controlAggregation": "detailPages"
+                },
+                "home": {
+                    "viewName": "SearchDeal/SearchDeal",
+                    "viewLevel": 1
+                },
+                "notFound": {
+                    "viewName": "NotFound",
+                    "transition": "show"
+                }
+            },
+            "resources": {
+                "css": [
+                    {
+                        "uri": "css/style.css"
+                    }
+                ]
+            }
+        }
+    },
+    "sap.platform.hcp": {
+        "uri": "",
+        "_version": "1.1.0"
+    },
+    "sap.platform.abap": {
+        "uri": "/sap/bc/ui5_ui5/sap/zdealapp2",
+        "_version": "1.1.0"
+    }
+}

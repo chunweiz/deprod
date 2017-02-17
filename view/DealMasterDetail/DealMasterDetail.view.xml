@@ -1,0 +1,7 @@
+<mvc:View controllerName="wb.cosmos.dealapp.controller.DealMasterDetail"
+	xmlns:mvc="sap.ui.core.mvc"
+	id = "SplitView"
+	xmlns="sap.m" >
+	<SplitContainer id="SplitContainer">
+	</SplitContainer>
+</mvc:View>

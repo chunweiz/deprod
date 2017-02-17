@@ -1,0 +1,129 @@
+{
+    "resources": [
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "view/NotFound.view.xml"
+        },
+        {
+            "name": "view/App.view.xml"
+        },
+        {
+            "name": "view/DealMasterDetail/DetailTabs/RightsTable.view.xml"
+        },
+        {
+            "name": "view/DealMasterDetail/DetailTabs/DimensionEditor.fragment.xml"
+        },
+        {
+            "name": "view/DealMasterDetail/DetailTabs/RightsDimTable.view.xml"
+        },
+        {
+            "name": "view/DealMasterDetail/DetailTabs/LicenseFeeTable.view.xml"
+        },
+        {
+            "name": "view/DealMasterDetail/DealMasterDetail.view.xml"
+        },
+        {
+            "name": "view/DealMasterDetail/Detail.view.xml"
+        },
+        {
+            "name": "view/DealMasterDetail/Master.view.xml"
+        },
+        {
+            "name": "view/SearchDeal/SearchDeal.view.xml"
+        },
+        {
+            "name": "localService/salesOrgSH.json"
+        },
+        {
+            "name": "localService/ZV_DEAL_SRH_HELP_SRV/metadata.xml"
+        },
+        {
+            "name": "localService/ZV_USER_FORMAT_SRV/metadata.xml"
+        },
+        {
+            "name": "localService/searchHelp.json"
+        },
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "localService/dealQuery.json"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "test/extended_runnable_file.html"
+        },
+        {
+            "name": "test/test.html"
+        },
+        {
+            "name": "img/wblogo.jpg"
+        },
+        {
+            "name": "Component-changes.json"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "util/papaparse.js"
+        },
+        {
+            "name": "util/Formatter.js"
+        },
+        {
+            "name": "util/papaparse.min.js"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "controller/Dimension.controller.js"
+        },
+        {
+            "name": "controller/RightsTable.controller.js"
+        },
+        {
+            "name": "controller/Detail.controller.js"
+        },
+        {
+            "name": "controller/BaseController.js"
+        },
+        {
+            "name": "controller/SearchDeal.controller.js"
+        },
+        {
+            "name": "controller/Master.controller.js"
+        },
+        {
+            "name": "controller/LicenseFeeTable.controller.js"
+        },
+        {
+            "name": "controller/App.controller.js"
+        },
+        {
+            "name": "controller/DealMasterDetail.controller.js"
+        },
+        {
+            "name": "controller/RightsDimTable.controller.js"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "neo-app.json"
+        }
+    ]
+}
